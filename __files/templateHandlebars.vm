@@ -1,0 +1,6 @@
+<html>
+  <body>
+    <p>The first part of the path was: {{request.path.[0]}}. </p>
+    <p>And the value of the &quot;page&quot; parameter was: {{request.query.page}}</p>
+  </body>
+</html>

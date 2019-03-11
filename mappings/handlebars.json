@@ -1,0 +1,11 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPath": "/api/handlebars"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "templateHandlebars.vm",
+        "transformers": ["response-template"]
+    }
+}

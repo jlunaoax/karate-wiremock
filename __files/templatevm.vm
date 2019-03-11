@@ -1,0 +1,8 @@
+<html>
+  <body>
+  #set( $foo = "Velocity" )
+  #set ($random = $math.getRandom())
+  <p>Hello $foo this is a random number: $random!</p>
+  <p>And the first parameter of the path was: {{request.path.[0]}}</p>
+  </body>
+</html>

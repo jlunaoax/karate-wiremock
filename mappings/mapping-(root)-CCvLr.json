@@ -1,0 +1,21 @@
+{
+  "id" : "c2edf6b6-f10f-3c04-91eb-bc64f1dc071b",
+  "request" : {
+    "url" : "/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "body-(root)-CCvLr.json",
+    "headers" : {
+      "Access-Control-Allow-Origin" : "*",
+      "Content-Type" : "application/json",
+      "X-Cloud-Trace-Context" : "2898f28f6ea669868719d9664e2c00a4",
+      "Vary" : "Accept-Encoding",
+      "Date" : "Sat, 09 Mar 2019 13:23:33 GMT",
+      "Server" : "Google Frontend",
+      "Cache-Control" : "private"
+    }
+  },
+  "uuid" : "c2edf6b6-f10f-3c04-91eb-bc64f1dc071b"
+}

@@ -1,0 +1,11 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/velocity"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "templatevm.vm",
+        "transformers": ["body-transformer", "response-template"]
+    }
+}  

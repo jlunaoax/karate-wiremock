@@ -1,0 +1,31 @@
+<testsuite failures="0" name="examples/users/users.feature" skipped="0" tests="2" time="0.757885">
+  <testcase classname="examples.users.users" name="get all users and then get the first user by id" time="0.47792">
+    <system-out>* url 'https://jsonplaceholder.typicode.com' .............................. passed
+Given path 'users' ........................................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def first = response[0] ................................................. passed
+Given path 'users', first.id .............................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="examples.users.users" name="create a user and then get it by id" time="0.279966">
+    <system-out>* url 'https://jsonplaceholder.typicode.com' .............................. passed
+Given path 'users' ........................................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def first = response[0] ................................................. passed
+Given path 'users', first.id .............................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* url 'https://jsonplaceholder.typicode.com' .............................. passed
+* def user = .............................................................. passed
+Given url 'https://jsonplaceholder.typicode.com/users' .................... passed
+And request user .......................................................... passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+* def id = response.id .................................................... passed
+* print 'created id is: ' + id ............................................ passed
+Given path id ............................................................. passed</system-out>
+  </testcase>
+</testsuite>

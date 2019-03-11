@@ -1,0 +1,11 @@
+17:00:40.860 karate.env system property was: null 
+17:00:40.867 request:
+1 > GET http://localhost:8080/user/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+
+17:00:40.881 org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused), http call failed after 0 milliseconds for URL: http://localhost:8080/user/get
+17:00:40.882 http request failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)

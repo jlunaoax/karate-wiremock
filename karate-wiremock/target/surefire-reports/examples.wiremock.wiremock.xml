@@ -1,0 +1,107 @@
+<testsuite failures="4" name="examples/wiremock/wiremock.feature" skipped="0" tests="4" time="0.055016">
+  <testcase classname="examples.wiremock.wiremock" name="Testing valid GET endpoint" time="0.019083">
+    <failure message="wiremock.feature:8 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)">Given url 'http://localhost:8080/user/get' ................................ passed
+When method GET ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: wiremock.feature:8 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)
+	at ✽.When method GET (wiremock.feature:8)
+
+Then status 200 ........................................................... skipped</failure>
+  </testcase>
+  <testcase classname="examples.wiremock.wiremock" name="Testing the exact response of a GET endpoint" time="0.016729">
+    <failure message="wiremock.feature:13 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)">Given url 'http://localhost:8080/user/get' ................................ passed
+When method GET ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: wiremock.feature:8 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)
+	at ✽.When method GET (wiremock.feature:8)
+
+Then status 200 ........................................................... skipped
+Given url 'http://localhost:8080/user/get' ................................ passed
+When method GET ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: wiremock.feature:13 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)
+	at ✽.When method GET (wiremock.feature:13)
+
+Then status 200 ........................................................... skipped
+And match $ == {id:"1234",name:"John Smith"} .............................. skipped</failure>
+  </testcase>
+  <testcase classname="examples.wiremock.wiremock" name="Testing that GET response contains specific field" time="0.009895">
+    <failure message="wiremock.feature:19 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)">Given url 'http://localhost:8080/user/get' ................................ passed
+When method GET ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: wiremock.feature:8 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)
+	at ✽.When method GET (wiremock.feature:8)
+
+Then status 200 ........................................................... skipped
+Given url 'http://localhost:8080/user/get' ................................ passed
+When method GET ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: wiremock.feature:13 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)
+	at ✽.When method GET (wiremock.feature:13)
+
+Then status 200 ........................................................... skipped
+And match $ == {id:"1234",name:"John Smith"} .............................. skipped
+Given url 'http://localhost:8080/user/get' ................................ passed
+When method GET ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: wiremock.feature:19 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)
+	at ✽.When method GET (wiremock.feature:19)
+
+Then status 200 ........................................................... skipped
+And match $ contains {id:"1234"} .......................................... skipped</failure>
+  </testcase>
+  <testcase classname="examples.wiremock.wiremock" name="Testing a POST endpoint with request body" time="0.009309">
+    <failure message="wiremock.feature:26 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)">Given url 'http://localhost:8080/user/get' ................................ passed
+When method GET ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: wiremock.feature:8 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)
+	at ✽.When method GET (wiremock.feature:8)
+
+Then status 200 ........................................................... skipped
+Given url 'http://localhost:8080/user/get' ................................ passed
+When method GET ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: wiremock.feature:13 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)
+	at ✽.When method GET (wiremock.feature:13)
+
+Then status 200 ........................................................... skipped
+And match $ == {id:"1234",name:"John Smith"} .............................. skipped
+Given url 'http://localhost:8080/user/get' ................................ passed
+When method GET ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: wiremock.feature:19 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)
+	at ✽.When method GET (wiremock.feature:19)
+
+Then status 200 ........................................................... skipped
+And match $ contains {id:"1234"} .......................................... skipped
+Given url 'http://localhost:8080/user/create' ............................. passed
+And request { id: '1234' , name: 'John Smith'} ............................ passed
+When method POST .......................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: wiremock.feature:26 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)
+	at ✽.When method POST (wiremock.feature:26)
+
+Then status 200 ........................................................... skipped
+And match $ contains {id:"#notnull"} ...................................... skipped</failure>
+  </testcase>
+</testsuite>

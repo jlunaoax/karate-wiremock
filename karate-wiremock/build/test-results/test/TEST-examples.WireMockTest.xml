@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="examples.WireMockTest" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="realluna" time="0.0">
+  <properties/>
+  <system-out><![CDATA[18:35:52.537 [Test worker] INFO  org.eclipse.jetty.util.log - Logging initialized @105938ms to org.eclipse.jetty.util.log.Slf4jLog
+18:35:55.337 [Test worker] INFO  org.eclipse.jetty.server.Server - jetty-9.4.14.v20181114; built: 2018-11-14T21:20:31.478Z; git: c4550056e785fb5665914545889f21dc136ad9e6; jvm 1.8.0_191-8u191-b12-2ubuntu0.16.04.1-b12
+18:35:55.728 [Test worker] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@1e5763e{/__admin,null,AVAILABLE}
+18:35:55.740 [Test worker] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@1bb3b40{/,null,AVAILABLE}
+18:35:56.380 [Test worker] INFO  o.e.jetty.server.AbstractConnector - Started NetworkTrafficServerConnector@18772a1{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+18:35:56.387 [Test worker] INFO  org.eclipse.jetty.server.Server - Started @109788ms
+18:35:57.840 [qtp10319276-26] INFO  o.e.j.s.h.ContextHandler.__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+---------------------------------------------------------
+feature: classpath:examples/users/users.feature
+scenarios:  0 | passed:  0 | failed:  0 | time: 0.0000
+---------------------------------------------------------
+HTML report: (paste into browser to view) | Karate version: 0.9.1
+file:/home/realluna/codebase/wiremock/karate-wiremock/build/surefire-reports/examples.users.users.html
+---------------------------------------------------------
+
+18:35:59.229 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+18:35:59.253 [Test worker] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8080/user/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+
+18:35:59.262 [qtp10319276-22] INFO  o.e.j.s.handler.ContextHandler.ROOT - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+18:35:59.327 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 69.74
+1 < 200
+1 < Content-Type: application/json
+1 < Matched-Stub-Id: 92e024fb-d21a-42ac-b369-a881d3c4c3fb
+1 < Server: Jetty(9.4.14.v20181114)
+1 < Transfer-Encoding: chunked
+1 < Vary: Accept-Encoding, User-Agent
+{ "id": "1234", name: "John Smith" }
+
+18:35:59.351 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+18:35:59.358 [Test worker] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8080/user/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+
+18:35:59.385 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 25.08
+1 < 200
+1 < Content-Type: application/json
+1 < Matched-Stub-Id: 92e024fb-d21a-42ac-b369-a881d3c4c3fb
+1 < Server: Jetty(9.4.14.v20181114)
+1 < Transfer-Encoding: chunked
+1 < Vary: Accept-Encoding, User-Agent
+{ "id": "1234", name: "John Smith" }
+
+18:35:59.487 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+18:35:59.502 [Test worker] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8080/user/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+
+18:35:59.522 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 19.16
+1 < 200
+1 < Content-Type: application/json
+1 < Matched-Stub-Id: 92e024fb-d21a-42ac-b369-a881d3c4c3fb
+1 < Server: Jetty(9.4.14.v20181114)
+1 < Transfer-Encoding: chunked
+1 < Vary: Accept-Encoding, User-Agent
+{ "id": "1234", name: "John Smith" }
+
+18:35:59.547 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+18:35:59.574 [Test worker] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/user/create
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 33
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+{"id":"1234","name":"John Smith"}
+
+18:35:59.590 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 14.32
+1 < 200
+1 < Content-Type: application/json
+1 < Matched-Stub-Id: eb247efa-ac1b-4164-b803-b08c9272c9ba
+1 < Server: Jetty(9.4.14.v20181114)
+1 < Transfer-Encoding: chunked
+1 < Vary: Accept-Encoding, User-Agent
+{ "id": "1234", name: "John Smith" }
+
+---------------------------------------------------------
+feature: classpath:examples/wiremock/wiremock.feature
+scenarios:  4 | passed:  4 | failed:  0 | time: 0.2848
+---------------------------------------------------------
+HTML report: (paste into browser to view) | Karate version: 0.9.1
+file:/home/realluna/codebase/wiremock/karate-wiremock/build/surefire-reports/examples.wiremock.wiremock.html
+---------------------------------------------------------
+
+18:35:59.697 [Test worker] INFO  o.e.jetty.server.AbstractConnector - Stopped NetworkTrafficServerConnector@18772a1{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+18:35:59.717 [Test worker] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@1bb3b40{/,null,UNAVAILABLE}
+18:35:59.718 [Test worker] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@1e5763e{/__admin,null,UNAVAILABLE}
+18:35:59.723 [Test worker] WARN  o.e.j.util.thread.QueuedThreadPool - QueuedThreadPool[qtp10319276]@9d75ac{STOPPING,8<=8<=10,i=4,q=6}[org.eclipse.jetty.util.thread.TryExecutor$$Lambda$24/11713904@464c34] Couldn't stop Thread[qtp10319276-28,5,main]
+18:35:59.723 [Test worker] WARN  o.e.j.util.thread.QueuedThreadPool - QueuedThreadPool[qtp10319276]@9d75ac{STOPPING,8<=8<=10,i=4,q=6}[org.eclipse.jetty.util.thread.TryExecutor$$Lambda$24/11713904@464c34] Couldn't stop Thread[qtp10319276-30,5,main]
+18:35:59.723 [Test worker] WARN  o.e.j.util.thread.QueuedThreadPool - QueuedThreadPool[qtp10319276]@9d75ac{STOPPING,8<=8<=10,i=4,q=6}[org.eclipse.jetty.util.thread.TryExecutor$$Lambda$24/11713904@464c34] Couldn't stop Thread[qtp10319276-23,5,main]
+18:35:59.725 [Test worker] WARN  o.e.j.util.thread.QueuedThreadPool - QueuedThreadPool[qtp10319276]@9d75ac{STOPPING,8<=8<=10,i=1,q=4}[org.eclipse.jetty.util.thread.TryExecutor$$Lambda$24/11713904@464c34] Couldn't stop Thread[qtp10319276-25,5,]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

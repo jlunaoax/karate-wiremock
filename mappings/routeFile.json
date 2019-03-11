@@ -1,0 +1,10 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/routeFile"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "route.txt"
+    }
+}
