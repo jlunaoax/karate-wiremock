@@ -7,7 +7,24 @@ Background:
 Scenario: Testing valid GET endpoint
 Given path 'user/get'
 When method GET
+* def vId = response.id
+* print vId
 Then status 200
+
+#GET the user Id
+* path 'user/get/' + vId
+When method GET
+Then status 200
+
+#Forbiden page 401
+* path 'user/get/rjjmlm'
+When method GET
+Then status 401
+
+#Forbiden page 500
+* path 'otr/get/rjjmlm'
+When method GET
+Then status 500
 
 Scenario: Testing the exact response of a GET endpoint
 Given path 'user/get'

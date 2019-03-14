@@ -1,15 +1,15 @@
-18:35:59.352 karate.env system property was: null 
-18:35:59.358 request:
+20:44:56.943 karate.env system property was: null 
+20:44:56.948 request:
 1 > GET http://localhost:8080/user/get
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: localhost:8080
 1 > User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
 
-18:35:59.386 response time in milliseconds: 25.08
+20:44:56.961 response time in milliseconds: 8.91
 1 < 200
 1 < Content-Type: application/json
-1 < Matched-Stub-Id: 92e024fb-d21a-42ac-b369-a881d3c4c3fb
+1 < Matched-Stub-Id: af8b1769-0c81-45bf-a68f-26a92f21dde7
 1 < Server: Jetty(9.4.14.v20181114)
 1 < Transfer-Encoding: chunked
 1 < Vary: Accept-Encoding, User-Agent

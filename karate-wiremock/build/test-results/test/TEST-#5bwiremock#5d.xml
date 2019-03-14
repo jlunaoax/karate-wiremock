@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="[wiremock]" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-03-11T00:35:59" hostname="realluna" time="0.002">
+<testsuite name="[wiremock]" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-03-14T02:44:57" hostname="realluna" time="0.002">
   <properties/>
-  <testcase name="[1:7] Testing valid GET endpoint" classname="[wiremock]" time="0.0"/>
-  <testcase name="[2:12] Testing the exact response of a GET endpoint" classname="[wiremock]" time="0.0"/>
-  <testcase name="[3:18] Testing that GET response contains specific field" classname="[wiremock]" time="0.0"/>
-  <testcase name="[4:24] Testing a POST endpoint with request body" classname="[wiremock]" time="0.0"/>
+  <testcase name="[1:7] Testing valid GET endpoint" classname="[wiremock]" time="0.001"/>
+  <testcase name="[2:29] Testing the exact response of a GET endpoint" classname="[wiremock]" time="0.0"/>
+  <testcase name="[3:35] Testing that GET response contains specific field" classname="[wiremock]" time="0.0"/>
+  <testcase name="[4:41] Testing a POST endpoint with request body" classname="[wiremock]" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

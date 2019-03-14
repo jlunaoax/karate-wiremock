@@ -172,141 +172,225 @@
 </div>
 <div class="step-row">
 <div class="step-cell passed">* url 'http://localhost:8080'</div>
-<div class="time-cell passed">0.004967</div>
+<div class="time-cell passed">0.00498</div>
 </div>
-<div class="preformatted">18:35:59.233 karate.env system property was: null</div>
+<div class="preformatted">20:44:56.780 karate.env system property was: null</div>
 <div class="step-row">
 <div class="step-cell passed">Given path 'user/get'</div>
-<div class="time-cell passed">0.005031</div>
+<div class="time-cell passed">0.007691</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">When method GET</div>
-<div class="time-cell passed">0.079918</div>
+<div class="time-cell passed">0.087879</div>
 </div>
-<div class="preformatted">18:35:59.255 request:
+<div class="preformatted">20:44:56.809 request:
 1 &gt; GET http://localhost:8080/user/get
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: localhost:8080
 1 &gt; User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
 
-18:35:59.331 response time in milliseconds: 69.74
+20:44:56.881 response time in milliseconds: 69.97
 1 &lt; 200
 1 &lt; Content-Type: application/json
-1 &lt; Matched-Stub-Id: 92e024fb-d21a-42ac-b369-a881d3c4c3fb
+1 &lt; Matched-Stub-Id: af8b1769-0c81-45bf-a68f-26a92f21dde7
 1 &lt; Server: Jetty(9.4.14.v20181114)
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Vary: Accept-Encoding, User-Agent
 { "id": "1234", name: "John Smith" }</div>
 <div class="step-row">
+<div class="step-cell passed">* def vId = response.id</div>
+<div class="time-cell passed">0.00078</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* print vId</div>
+<div class="time-cell passed">0.000361</div>
+</div>
+<div class="preformatted">20:44:56.883 [print] 1234</div>
+<div class="step-row">
 <div class="step-cell passed">Then status 200</div>
+<div class="time-cell passed">0.000013</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* path 'user/get/' + vId</div>
+<div class="time-cell passed">0.005339</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">When method GET</div>
+<div class="time-cell passed">0.019385</div>
+</div>
+<div class="preformatted">20:44:56.890 request:
+2 &gt; GET http://localhost:8080/user/get/1234
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: localhost:8080
+2 &gt; User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+
+20:44:56.908 response time in milliseconds: 13.29
+2 &lt; 200
+2 &lt; Content-Type: application/json
+2 &lt; Matched-Stub-Id: c53c9353-5ce7-42b6-a6b1-56f8f444fa79
+2 &lt; Server: Jetty(9.4.14.v20181114)
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Vary: Accept-Encoding, User-Agent
+{ "id": "1234", name: "John Smith" }</div>
+<div class="step-row">
+<div class="step-cell passed">Then status 200</div>
+<div class="time-cell passed">0.000016</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* path 'user/get/rjjmlm'</div>
+<div class="time-cell passed">0.003419</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">When method GET</div>
+<div class="time-cell passed">0.008748</div>
+</div>
+<div class="preformatted">20:44:56.914 request:
+3 &gt; GET http://localhost:8080/user/get/rjjmlm
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: localhost:8080
+3 &gt; User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+
+20:44:56.920 response time in milliseconds: 4.88
+3 &lt; 401
+3 &lt; Matched-Stub-Id: b65328be-0c53-48e0-8c55-d04a3ff50dc1
+3 &lt; Server: Jetty(9.4.14.v20181114)
+3 &lt; Transfer-Encoding: chunked</div>
+<div class="step-row">
+<div class="step-cell passed">Then status 401</div>
+<div class="time-cell passed">0.000014</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* path 'otr/get/rjjmlm'</div>
+<div class="time-cell passed">0.003403</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">When method GET</div>
+<div class="time-cell passed">0.007871</div>
+</div>
+<div class="preformatted">20:44:56.926 request:
+4 &gt; GET http://localhost:8080/otr/get/rjjmlm
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: localhost:8080
+4 &gt; User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+
+20:44:56.932 response time in milliseconds: 5.48
+4 &lt; 500
+4 &lt; Matched-Stub-Id: 22fe4b5a-1cad-4226-8a6e-328e501ff7f7
+4 &lt; Server: Jetty(9.4.14.v20181114)
+4 &lt; Transfer-Encoding: chunked</div>
+<div class="step-row">
+<div class="step-cell passed">Then status 500</div>
 <div class="time-cell passed">0.000014</div>
 </div>
 </div>
 <div class="scenario">
 <div class="scenario-heading">
-<span class="scenario-keyword">Scenario: [2:12]</span><span class="scenario-name">Testing the exact response of a GET endpoint</span>
+<span class="scenario-keyword">Scenario: [2:29]</span><span class="scenario-name">Testing the exact response of a GET endpoint</span>
 </div>
 <div class="step-row">
 <div class="step-cell passed">* url 'http://localhost:8080'</div>
-<div class="time-cell passed">0.000283</div>
+<div class="time-cell passed">0.000399</div>
 </div>
-<div class="preformatted">18:35:59.352 karate.env system property was: null</div>
+<div class="preformatted">20:44:56.943 karate.env system property was: null</div>
 <div class="step-row">
 <div class="step-cell passed">Given path 'user/get'</div>
-<div class="time-cell passed">0.000142</div>
+<div class="time-cell passed">0.000198</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">When method GET</div>
-<div class="time-cell passed">0.029958</div>
+<div class="time-cell passed">0.01579</div>
 </div>
-<div class="preformatted">18:35:59.358 request:
+<div class="preformatted">20:44:56.948 request:
 1 &gt; GET http://localhost:8080/user/get
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: localhost:8080
 1 &gt; User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
 
-18:35:59.386 response time in milliseconds: 25.08
+20:44:56.961 response time in milliseconds: 8.91
 1 &lt; 200
 1 &lt; Content-Type: application/json
-1 &lt; Matched-Stub-Id: 92e024fb-d21a-42ac-b369-a881d3c4c3fb
+1 &lt; Matched-Stub-Id: af8b1769-0c81-45bf-a68f-26a92f21dde7
 1 &lt; Server: Jetty(9.4.14.v20181114)
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Vary: Accept-Encoding, User-Agent
 { "id": "1234", name: "John Smith" }</div>
 <div class="step-row">
 <div class="step-cell passed">Then status 200</div>
-<div class="time-cell passed">0.000014</div>
+<div class="time-cell passed">0.000016</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And match $ == {id:"1234",name:"John Smith"}</div>
-<div class="time-cell passed">0.08316</div>
+<div class="time-cell passed">0.005231</div>
 </div>
 </div>
 <div class="scenario">
 <div class="scenario-heading">
-<span class="scenario-keyword">Scenario: [3:18]</span><span class="scenario-name">Testing that GET response contains specific field</span>
+<span class="scenario-keyword">Scenario: [3:35]</span><span class="scenario-name">Testing that GET response contains specific field</span>
 </div>
 <div class="step-row">
 <div class="step-cell passed">* url 'http://localhost:8080'</div>
-<div class="time-cell passed">0.000283</div>
+<div class="time-cell passed">0.000231</div>
 </div>
-<div class="preformatted">18:35:59.488 karate.env system property was: null</div>
+<div class="preformatted">20:44:56.983 karate.env system property was: null</div>
 <div class="step-row">
 <div class="step-cell passed">Given url 'http://localhost:8080/user/get'</div>
-<div class="time-cell passed">0.010365</div>
+<div class="time-cell passed">0.004799</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">When method GET</div>
-<div class="time-cell passed">0.029065</div>
+<div class="time-cell passed">0.018909</div>
 </div>
-<div class="preformatted">18:35:59.502 request:
+<div class="preformatted">20:44:56.997 request:
 1 &gt; GET http://localhost:8080/user/get
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: localhost:8080
 1 &gt; User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
 
-18:35:59.529 response time in milliseconds: 19.16
+20:44:57.011 response time in milliseconds: 10.07
 1 &lt; 200
 1 &lt; Content-Type: application/json
-1 &lt; Matched-Stub-Id: 92e024fb-d21a-42ac-b369-a881d3c4c3fb
+1 &lt; Matched-Stub-Id: af8b1769-0c81-45bf-a68f-26a92f21dde7
 1 &lt; Server: Jetty(9.4.14.v20181114)
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Vary: Accept-Encoding, User-Agent
 { "id": "1234", name: "John Smith" }</div>
 <div class="step-row">
 <div class="step-cell passed">Then status 200</div>
-<div class="time-cell passed">0.000017</div>
+<div class="time-cell passed">0.00005</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And match $ contains {id:"1234"}</div>
-<div class="time-cell passed">0.00024</div>
+<div class="time-cell passed">0.000215</div>
 </div>
 </div>
 <div class="scenario">
 <div class="scenario-heading">
-<span class="scenario-keyword">Scenario: [4:24]</span><span class="scenario-name">Testing a POST endpoint with request body</span>
+<span class="scenario-keyword">Scenario: [4:41]</span><span class="scenario-name">Testing a POST endpoint with request body</span>
 </div>
 <div class="step-row">
 <div class="step-cell passed">* url 'http://localhost:8080'</div>
-<div class="time-cell passed">0.000322</div>
+<div class="time-cell passed">0.000238</div>
 </div>
-<div class="preformatted">18:35:59.548 karate.env system property was: null</div>
+<div class="preformatted">20:44:57.029 karate.env system property was: null</div>
 <div class="step-row">
 <div class="step-cell passed">Given url 'http://localhost:8080/user/create'</div>
-<div class="time-cell passed">0.006896</div>
+<div class="time-cell passed">0.00664</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And request { id: '1234' , name: 'John Smith'}</div>
-<div class="time-cell passed">0.000143</div>
+<div class="time-cell passed">0.000193</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">When method POST</div>
-<div class="time-cell passed">0.018561</div>
+<div class="time-cell passed">0.01308</div>
 </div>
-<div class="preformatted">18:35:59.575 request:
+<div class="preformatted">20:44:57.042 request:
 1 &gt; POST http://localhost:8080/user/create
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
@@ -316,21 +400,21 @@
 1 &gt; User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
 {"id":"1234","name":"John Smith"}
 
-18:35:59.590 response time in milliseconds: 14.32
+20:44:57.053 response time in milliseconds: 8.65
 1 &lt; 200
 1 &lt; Content-Type: application/json
-1 &lt; Matched-Stub-Id: eb247efa-ac1b-4164-b803-b08c9272c9ba
+1 &lt; Matched-Stub-Id: 58ea8b63-5649-45bd-8cb1-579e35981187
 1 &lt; Server: Jetty(9.4.14.v20181114)
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Vary: Accept-Encoding, User-Agent
 { "id": "1234", name: "John Smith" }</div>
 <div class="step-row">
 <div class="step-cell passed">Then status 200</div>
-<div class="time-cell passed">0.000018</div>
+<div class="time-cell passed">0.000015</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And match $ contains {id:"#notnull"}</div>
-<div class="time-cell passed">0.015389</div>
+<div class="time-cell passed">0.001512</div>
 </div>
 </div>
 </div>

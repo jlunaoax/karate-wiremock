@@ -1,5 +1,5 @@
-<testsuite failures="0" name="examples/users/users.feature" skipped="0" tests="2" time="0.757885">
-  <testcase classname="examples.users.users" name="get all users and then get the first user by id" time="0.47792">
+<testsuite failures="0" name="examples/users/users.feature" skipped="0" tests="2" time="0.770027">
+  <testcase classname="examples.users.users" name="get all users and then get the first user by id" time="0.459886">
     <system-out>* url 'https://jsonplaceholder.typicode.com' .............................. passed
 Given path 'users' ........................................................ passed
 When method get ........................................................... passed
@@ -9,7 +9,7 @@ Given path 'users', first.id .............................................. pass
 When method get ........................................................... passed
 Then status 200 ........................................................... passed</system-out>
   </testcase>
-  <testcase classname="examples.users.users" name="create a user and then get it by id" time="0.279966">
+  <testcase classname="examples.users.users" name="create a user and then get it by id" time="0.310142">
     <system-out>* url 'https://jsonplaceholder.typicode.com' .............................. passed
 Given path 'users' ........................................................ passed
 When method get ........................................................... passed
